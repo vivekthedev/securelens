@@ -1,0 +1,8 @@
+ui:
+  name: "AskMe Bot"
+  description: "A bot that answers questions using a knowledge base."
+
+default_expand_messages: true
+
+auth:
+  required: true

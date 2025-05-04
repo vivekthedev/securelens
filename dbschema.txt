@@ -1,0 +1,76 @@
+
+# Database Schema
+
+## Table: `users`
+
+| Column Name   | Data Type | Not Null | Default Value | Primary Key |
+|---------------|-----------|-----------|----------------|--------------|
+| id            | INTEGER   | 0         | None           | 1            |
+| name          | TEXT      | 1         | None           | 0            |
+| email         | TEXT      | 1         | None           | 0            |
+| username      | TEXT      | 1         | None           | 0            |
+| password      | TEXT      | 1         | None           | 0            |
+| role          | TEXT      | 1         | None           | 0            |
+| status        | TEXT      | 1         | None           | 0            |
+| last_login    | TEXT      | 0         | None           | 0            |
+| created_at    | TEXT      | 1         | None           | 0            |
+| region        | TEXT      | 0         | None           | 0            |
+| department    | TEXT      | 0         | None           | 0            |
+| on_behalf_of  | INTEGER   | 0         | None           | 0            |
+| phone_number  | TEXT      | 0         | None           | 0            |
+| job_title     | TEXT      | 0         | None           | 0            |
+
+## Table: `sqlite_sequence`
+
+| Column Name | Data Type | Not Null | Default Value | Primary Key |
+|-------------|-----------|-----------|----------------|--------------|
+| name        | (empty)   | 0         | None           | 0            |
+| seq         | (empty)   | 0         | None           | 0            |
+
+## Table: `customers`
+
+| Column Name      | Data Type | Not Null | Default Value | Primary Key |
+|------------------|-----------|-----------|----------------|--------------|
+| id               | INTEGER   | 0         | None           | 1            |
+| name             | TEXT      | 1         | None           | 0            |
+| budget           | REAL      | 1         | None           | 0            |
+| contact_email    | TEXT      | 0         | None           | 0            |
+| status           | TEXT      | 1         | None           | 0            |
+| industry         | TEXT      | 0         | None           | 0            |
+| region           | TEXT      | 0         | None           | 0            |
+| last_activity_at | TEXT      | 0         | None           | 0            |
+| emp_id           | INTEGER   | 1         | None           | 0            |
+| contact_number   | TEXT      | 0         | None           | 0            |
+| address          | TEXT      | 0         | None           | 0            |
+
+## Table: `hr_data`
+
+| Column Name       | Data Type | Not Null | Default Value | Primary Key |
+|-------------------|-----------|-----------|----------------|--------------|
+| id                | INTEGER   | 0         | None           | 1            |
+| leave_balance     | INTEGER   | 0         | None           | 0            |
+| date_of_joining   | TEXT      | 0         | None           | 0            |
+| employment_status | TEXT      | 0         | None           | 0            |
+| last_review_date  | TEXT      | 0         | None           | 0            |
+| notes             | TEXT      | 0         | None           | 0            |
+| emp_id            | INTEGER   | 1         | None           | 0            |
+| salary            | REAL      | 0         | None           | 0            |
+| designation       | TEXT      | 0         | None           | 0            |
+| benefits          | TEXT      | 0         | None           | 0            |
+
+## Table: `financial_data`
+
+| Column Name       | Data Type | Not Null | Default Value | Primary Key |
+|-------------------|-----------|-----------|----------------|--------------|
+| id                | INTEGER   | 0         | None           | 1            |
+| document_url      | TEXT      | 0         | None           | 0            |
+| created_by        | INTEGER   | 0         | None           | 0            |
+| approved_by       | INTEGER   | 0         | None           | 0            |
+| transaction_date  | TEXT      | 0         | None           | 0            |
+| transaction_type  | TEXT      | 0         | None           | 0            |
+| amount            | REAL      | 0         | None           | 0            |
+| notes             | TEXT      | 0         | None           | 0            |
+| vendor_name       | TEXT      | 0         | None           | 0            |
+| payment_method    | TEXT      | 0         | None           | 0            |
+```
+
