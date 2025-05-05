@@ -63,3 +63,22 @@ async def check_user_permission(ctx: RunContext[AgentContext]) -> bool:
         return False
     return True
 
+
+async def can_view_pii(user_id, action, resource, resource_id) -> bool:
+    """
+    Check if the user can view PII data.
+
+    Args:
+        user_id (str): The ID of the user.
+        action (str): The action to check.
+        resource (str): The resource to check.
+
+    Returns:
+        bool: True if the user can view PII data, False otherwise.
+    """
+    permitted = await pdp.check(
+        user=user_id,
+        action=action,
+        resource=f"{resource}:{resource_id}",
+    )
+    return permitted
