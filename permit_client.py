@@ -57,4 +57,6 @@ async def sync():
 
 
 if __name__ == "__main__":
-    asyncio.run(checkpermission("1", "read", "customers"))
+    # asyncio.run(sync())
+    # asyncio.run(checkpermission("1", "read", "customers"))
+    pass
